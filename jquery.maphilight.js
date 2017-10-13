@@ -131,6 +131,10 @@
 				context.lineWidth = options.strokeWidth;
 				context.stroke();
 			}
+			if(options.text){
+			        context.font=options.font;
+				context.fillText(options.fillText,coords[0],coords[1]);
+			}
 
 			context.restore();
 
@@ -344,6 +348,9 @@
 		fill: true,
 		fillColor: '000000',
 		fillOpacity: 0.2,
+		text:false,
+		font:'22px "sans-serif"',
+		fillTEXT:'click',
 		stroke: true,
 		strokeColor: 'ff0000',
 		strokeOpacity: 1,
