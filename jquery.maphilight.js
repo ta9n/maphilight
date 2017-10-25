@@ -354,7 +354,7 @@
 		fillColor: '000000',
 		fillOpacity: 0.2,
 		text:false,
-		image: '';
+		image: '',
 		font:'22px "sans-serif"',
 		fillTEXT:'click',
 		stroke: true,
