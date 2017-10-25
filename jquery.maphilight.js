@@ -137,7 +137,23 @@
             if(options.image){
                 dimg = new Image();
                 dimg.src = options.image;
-                context.drawImage(dimg,coords[0],coords[1]);
+                //imageの幅
+                var t_width = coords[2] - coords[0];
+                var t_height = coords[3] - coords[1];
+                //縦横比
+                var new_width = Math.min(t_width,dimg.width);
+                var new_height = Math.min(t_height,dimg.height);
+
+                //比率の比較
+                var c_width = Math.min(1,new_width / dimg.width);
+                var c_height =  Math.min(1,new_height / dimg.height);
+                if(c_width > c_height){
+                    new_height = dimg.height * c_width;
+                }else{
+                    new_width = dimg.width * c_height;
+                }
+
+                context.drawImage(dimg,coords[0],coords[1],new_width,new_height);
             }
 
             context.restore();
