@@ -135,6 +135,11 @@
 			        context.font=options.font;
 				context.fillText(options.fillText,coords[0],coords[1]);
 			}
+			if(options.image){
+				var dimg = new Image();
+				dimg.src = options.image;
+				content.drawImage(dimg,coords[0],coords[1])
+			}
 
 			context.restore();
 
@@ -349,6 +354,7 @@
 		fillColor: '000000',
 		fillOpacity: 0.2,
 		text:false,
+		image: '';
 		font:'22px "sans-serif"',
 		fillTEXT:'click',
 		stroke: true,
