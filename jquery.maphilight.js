@@ -138,7 +138,7 @@
 			if(options.image){
 				var dimg = new Image();
 				dimg.src = options.image;
-				content.drawImage(dimg,coords[0],coords[1])
+				content.drawImage(dimg,coords[0],coords[1]);
 			}
 
 			context.restore();
